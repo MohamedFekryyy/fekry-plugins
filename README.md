@@ -29,7 +29,7 @@ plus conflict resolution rules for when a product sits between two modes, so the
 /plugin install fekry-design@fekry-plugins
 ```
 
-updates come with every commit. force a refresh with `/plugin marketplace update fekry-plugins`.
+heads up: installed plugins stay pinned to the commit you installed. to get my updates automatically, flip one toggle: `/plugin` > marketplaces > fekry-plugins > enable auto-update. new commits then land on your next session start.
 
 ### codex or any other agent
 
