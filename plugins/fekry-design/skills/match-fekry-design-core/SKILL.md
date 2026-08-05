@@ -134,11 +134,19 @@ A contrast serif can appear in a Utility product for a hero headline or a celebr
 
 ## Motion Rules
 
+Before animating anything, answer two questions in order:
+
+1. **How often will the user trigger this?** High-frequency interactions (repeated actions, list navigation, toggles the user hits constantly) get minimal or no animation. Save motion budget for moments the user sees occasionally: modals, reveals, onboarding, celebrations.
+2. **What does this animation clarify?** Hierarchy, state, spatial relationship, or mood. If the honest answer is "it looks cool", cut it.
+
+Then apply the values:
+
 - Use motion to reveal relationships and reduce cognitive load.
+- Micro-interactions (press feedback, hovers, toggles, small reveals): target `120-200ms`, hard cap `250ms`.
+- Macro transitions (modals, drawers, page-level reveals, hero moments): `300-600ms`.
 - Favor spring settings near `stiffness: 300-400`, `damping: 25-30`, `mass: 0.5-0.8`.
 - Favor easing like `[0.22, 1, 0.36, 1]` or `[0.4, 0, 0.2, 1]`.
 - Favor fade-plus-slide, staggered entrance, mild hover lift, gentle scale, parallax, or masked media.
-- Keep most transitions in the `0.3s-0.8s` range.
 - Use infinite motion only for subtle glow, marquee, or ambient background behavior.
 - If an animation does not clarify hierarchy, state, or mood, cut it.
 
@@ -191,6 +199,22 @@ A contrast serif can appear in a Utility product for a hero headline or a celebr
 6. Add motion only where it clarifies meaning or improves feel.
 7. Review for restraint. Cut anything that does not earn its place.
 
+## Accessibility Rules
+
+- Respect `prefers-reduced-motion`. Reduced means gentler, not zero: keep opacity and color transitions that aid comprehension, remove positional movement and scale.
+- Gate hover effects behind `@media (hover: hover) and (pointer: fine)` so touch devices don't trigger false hover states.
+- In RTL contexts, mirror directional motion, directional icons, and reading order. Use logical CSS properties (`margin-inline-start`, `padding-inline-end`) instead of left/right.
+- Atmospheric modes (editorial, glass, arabic luxury) never get a pass on contrast. If the texture or blur wins over legibility, the treatment loses.
+
+## Review Output Format
+
+When reviewing a design or UI code against this skill, always output a single markdown table:
+
+| What I'd change | Why | Which rule |
+| --- | --- | --- |
+
+One row per issue. "Which rule" points at the section of this skill the issue violates. Do not review as loose prose paragraphs or scattered before/after fragments; the table forces every critique to be specific, justified, and traceable.
+
 ## Review Checklist
 
 - Does every element earn its place?
@@ -203,3 +227,18 @@ A contrast serif can appear in a Utility product for a hero headline or a celebr
 - Does the design avoid hype, clutter, and false complexity?
 - If the product is health-related, does it avoid pinkwashing and condescension?
 - If the product is Arabic-first, does it feel natively RTL and culturally intentional?
+
+### Common Violations And Fixes
+
+| Violation | Fix |
+| --- | --- |
+| Purple-by-default palette | Choose an accent from the product's domain truth |
+| Two accent families mixed | Pick one accent family and stay there |
+| Three or more type voices | Cut to one main voice plus one contrast voice |
+| Decorative card containers | Remove the container or make it establish real layer separation |
+| Animation without a purpose | Cut it, or tie it to hierarchy, state, or mood |
+| Micro-interaction over `250ms` | Bring it into the `120-200ms` band |
+| Same treatment on every surface | Apply atmosphere to specific layers, keep the rest quiet |
+| Health UI that decorates instead of informs | Rebuild around evidence, clarity, and confident tone |
+| RTL as flipped-LTR afterthought | Design RTL natively: mirrored motion, logical properties, culturally intentional type |
+| Glass effect dissolving the layout | Strengthen the structure underneath, then reapply the treatment to one layer |
