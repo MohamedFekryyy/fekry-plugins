@@ -1,6 +1,6 @@
 # fekry-plugins
 
-design skills for AI agents, by [fekry aiad](https://github.com/MohamedFekryyy).
+design skills for AI agents, by [fekry aiad](https://fekryaiad.com).
 
 i'm a product designer who got tired of agents shipping the same templated ai-looking interfaces. so i wrote my taste down. this repo is how i hand it to any agent i work with, and now to you.
 
