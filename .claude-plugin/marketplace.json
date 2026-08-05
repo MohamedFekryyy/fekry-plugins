@@ -1,0 +1,16 @@
+{
+  "name": "fekry-plugins",
+  "owner": {
+    "name": "Fekry Aiad"
+  },
+  "description": "Fekry's design skills and tools for Claude",
+  "plugins": [
+    {
+      "name": "fekry-design",
+      "source": "./plugins/fekry-design",
+      "description": "Design like Fekry: taste, tokens, motion language, and five style modes",
+      "category": "design",
+      "tags": ["design", "ui", "framer", "arabic", "glassmorphism"]
+    }
+  ]
+}
