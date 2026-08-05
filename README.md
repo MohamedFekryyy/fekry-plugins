@@ -1,31 +1,53 @@
 # fekry-plugins
 
-Claude plugin marketplace by Fekry Aiad.
+design skills for AI agents, by [fekry aiad](https://github.com/MohamedFekryyy).
 
-## Install
+i'm a product designer who got tired of agents shipping the same templated ai-looking interfaces. so i wrote my taste down. this repo is how i hand it to any agent i work with, and now to you.
 
-In Claude Code:
+## what's inside
+
+one plugin, two skills:
+
+**match-fekry-design** is the full version. my exact philosophy, five style modes, motion values, type rules, project tokens, the works. this is what i run. it will make your interfaces look like mine, which you probably don't want unless you're me.
+
+**match-fekry-design-core** is the portable one. same philosophy and all five modes, but with my project palettes and file paths stripped out. this is the one you want. use it as-is, or fork it and swap in your own taste. honestly the best use of this repo is as a template for writing your own design skill.
+
+the five modes:
+
+- utility/product: dashboards, saas, fintech. clarity or nothing
+- editorial/personal: portfolios and manifestos. dark canvas, serif headlines, one loud accent
+- health clarity: evidence-first health products. zero pinkwashing
+- arabic luxury/community: dark, layered, gold in controlled doses. RTL native from the first pixel
+- glass/experimental: blur and refraction, but the layout underneath stays honest
+
+plus conflict resolution rules for when a product sits between two modes, so the agent doesn't guess.
+
+## install
+
+### claude code
 
 ```
 /plugin marketplace add MohamedFekryyy/fekry-plugins
 /plugin install fekry-design@fekry-plugins
 ```
 
-## Plugins
+updates come with every commit. force a refresh with `/plugin marketplace update fekry-plugins`.
 
-### fekry-design
+### codex or any other agent
 
-My design philosophy, product taste, motion language, and implementation preferences. Ships two skills:
+the skills are plain SKILL.md, spec-compliant agent skills. no claude-only fields. skip the marketplace and copy the folders:
 
-- **match-fekry-design** — the full version, with my project tokens and source anchors. This is what I use.
-- **match-fekry-design-core** — the portable version. Same philosophy, five style modes, and conflict resolution rules, but no project-specific palettes or file paths. Use this one if you're not me, or fork it as the base for your own design skill.
-
-Five style modes: Utility/Product Default, Editorial/Personal, Health Clarity, Arabic Luxury/Community, Glass/Experimental. Plus rules for what to do when a product sits between two modes.
-
-## Updating
-
-New commits are picked up automatically. Force a refresh with:
-
+```bash
+git clone https://github.com/MohamedFekryyy/fekry-plugins
+cp -r fekry-plugins/plugins/fekry-design/skills/* ~/.codex/skills/
 ```
-/plugin marketplace update fekry-plugins
-```
+
+or drop them in `~/.agents/skills/` to cover gemini cli and friends in one go.
+
+## the short version of the philosophy
+
+design is not decoration. every element earns its place or gets cut. context beats hype. build fast, edit slowly. one memorable move beats five generic ones. if a phrase sounds cool but says nothing, delete it. same rule applies to UI.
+
+## license
+
+take it, fork it, make it yours. attribution appreciated, not required.
