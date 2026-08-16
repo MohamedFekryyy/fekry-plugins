@@ -8,7 +8,9 @@ i'm a product designer who got tired of agents shipping the same templated ai-lo
 
 one plugin, one skill: **match-fekry-design-core**.
 
-my design philosophy, five style modes, motion language, and implementation rules, packaged so any agent can apply them. use it as-is if you like how i think, or fork it and swap in your own taste. honestly the best use of this repo is as a template for writing your own design skill.
+my design philosophy, five style modes, motion language, and the implementation craft underneath, packaged so any agent can apply them. use it as-is if you like how i think, or fork it and swap in your own taste. honestly the best use of this repo is as a template for writing your own design skill.
+
+every section leads with the judgment call, then the defaults that hold it up: type craft and measure, semantic color tokens, motion timing and interruption, accessibility as structure rather than a final pass, and UI copy rules. taste picks the direction. craft is what survives real content, real devices, and real users.
 
 the five modes:
 
