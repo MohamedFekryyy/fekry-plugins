@@ -1,8 +1,8 @@
 {
   "name": "fekry-design",
-  "description": "Fekry Aiad's design philosophy, taste, and implementation craft as a portable skill: five style modes, mode conflict resolution, color tokens, motion language, accessibility defaults, UI copy rules, and a review contract for interfaces that feel authored instead of generic.",
+  "description": "Fekry Aiad's design philosophy, taste, and implementation craft as a portable skill: a short designer interview, five style modes, mode conflict resolution, color tokens, motion language, accessibility defaults, UI copy rules, routing to Stageshow and Hairline, and a review contract for interfaces that feel authored instead of generic.",
   "author": {
     "name": "Fekry Aiad",
-    "version": "1.1.0"
+    "version": "1.2.0"
   }
 }

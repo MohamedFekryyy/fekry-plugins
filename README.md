@@ -22,6 +22,24 @@ the five modes:
 
 plus conflict resolution rules for when a product sits between two modes, so the agent doesn't guess.
 
+## it asks before it designs
+
+open brief? the agent asks you two to four questions, in one message, each with a suggested answer so "go with yours" works. the job, the feel, the limits, and the one thing people should remember. then it plays the brief back in five lines and starts.
+
+small edits, reviews, and clear briefs skip the interview. and your answers beat my taste. they don't beat accessibility.
+
+## pairs well with
+
+two skills by other people that i use all the time. optional, installed separately. mine decides if you need one and passes it your brief so you don't get interviewed twice.
+
+- [stageshow](https://github.com/benjitaylor/skills) by benji taylor: believable product UI, still or animated, for heroes and feature cards
+- [hairline](https://github.com/lucasmarkes/hairline) by lucas marques: isometric line figures that answer the pointer, from an idea or your own svg
+
+```bash
+npx skills add benjitaylor/skills --skill stageshow
+npx skills add lucasmarkes/hairline
+```
+
 ## install
 
 ### claude code
