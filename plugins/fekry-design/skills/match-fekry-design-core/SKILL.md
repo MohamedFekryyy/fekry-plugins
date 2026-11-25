@@ -93,7 +93,7 @@ Use for prototypes, floating controls, hero interactions, command palettes, stat
 
 - Use backdrop blur, translucent fills, internal highlights, and disciplined shadow stacks.
 - Use plus-lighter or overlay blending only where it improves depth.
-- Allow tilt, pointer-follow highlights, or refractive effects only if content stays legible.
+- Allow pointer-follow highlights or refractive effects only if content stays legible.
 - Keep the layout underneath strong and simple. Do not let the effect dissolve the interface into visual mush.
 - Apply the treatment to specific layers, not the whole page.
 
@@ -207,7 +207,8 @@ Then apply the values:
 - Macro transitions (modals, drawers, page-level reveals, hero moments): `300-600ms`.
 - Favor spring settings near `stiffness: 300-400`, `damping: 25-30`, `mass: 0.5-0.8`.
 - Favor easing like `[0.22, 1, 0.36, 1]` or `[0.4, 0, 0.2, 1]`.
-- Favor fade-plus-slide, staggered entrance, mild hover lift, gentle scale, parallax, or masked media.
+- Favor fade-plus-slide, staggered entrance, gentle scale on entrance, parallax, or masked media.
+- Nothing moves on hover: no lift, nudge, tilt, magnet, or image zoom on buttons, links, cards, or media. Hover changes color, opacity, or light only. A Hairline figure or Stageshow scene is content, not a control, so it may answer the pointer.
 - Stagger staged entrances by around `100ms`, grouped either by element or by cluster.
 - Use infinite motion only for subtle glow, marquee, or ambient background behavior.
 - If an animation does not clarify hierarchy, state, or mood, cut it.
@@ -368,6 +369,7 @@ One row per issue. "Which rule" points at the section of this skill the issue vi
 | Asking what the files already answer | Read first, then ask only what is still open |
 | Product scene or line figure used as filler | Name what is lost without it, or cut it |
 | Animation without a purpose | Cut it, or tie it to hierarchy, state, or mood |
+| Control or card that moves on hover | Change color, opacity, or light instead |
 | Micro-interaction over `250ms` | Bring it into the `120-200ms` band |
 | `transition: all` | Name the exact properties that change |
 | Same treatment on every surface | Apply atmosphere to specific layers, keep the rest quiet |
