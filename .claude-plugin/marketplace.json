@@ -8,7 +8,7 @@
     {
       "name": "fekry-design",
       "source": "./plugins/fekry-design",
-      "description": "Design like Fekry: taste, tokens, motion language, accessibility defaults, and five style modes",
+      "description": "Design like Fekry: a short interview, taste, tokens, motion language, accessibility defaults, and five style modes",
       "category": "design",
       "tags": ["design", "ui", "framer", "arabic", "glassmorphism"]
     }

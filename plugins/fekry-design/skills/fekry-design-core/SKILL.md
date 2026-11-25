@@ -1,13 +1,13 @@
 ---
-name: match-fekry-design-core
-description: Portable version of Fekry Aiad's design philosophy and implementation craft, without his project-specific tokens, brand palettes, or source files. Covers style modes, typography, color tokens, motion, accessibility, and UI copy. Use when designing or reviewing an interface with Fekry's approach, or as a starting point for building your own design skill.
+name: fekry-design-core
+description: Portable version of Fekry Aiad's design philosophy and implementation craft, without his project-specific tokens, brand palettes, or source files. Interviews the designer briefly when a brief is open, then covers style modes, typography, color tokens, motion, accessibility, and UI copy. Routes to Stageshow for faux product UI and Hairline for interactive line figures when they fit. Use when designing or reviewing an interface with Fekry's approach, or as a starting point for building your own design skill.
 ---
 
-# Match Fekry Design (Core)
+# Fekry Design (Core)
 
 ## Overview
 
-Match Fekry by optimizing for utility first, then emotional precision. Build interfaces that earn their place, reduce the distance between user intent and outcome, and feel authored rather than trend-chased.
+Design like Fekry by optimizing for utility first, then emotional precision. Build interfaces that earn their place, reduce the distance between user intent and outcome, and feel authored rather than trend-chased.
 
 Taste decides what to build. Craft decides whether it survives contact with real users, real content, and real devices. This skill carries both: each section leads with the judgment call, then the implementation defaults that hold it up.
 
@@ -17,6 +17,17 @@ Taste decides what to build. Craft decides whether it survives contact with real
 - Build the structural version first. Add atmosphere only after hierarchy, flows, and comprehension are already strong.
 - Remove filler before adding flourish.
 - Prefer one memorable move over five generic ones.
+
+## Interview First, Briefly
+
+When the brief is open enough that two reasonable readings would look visibly different, read [references/interview.md](references/interview.md) and ask before designing. Skip it for small edits, reviews, complete briefs, and "just do it".
+
+- Read the repo, files, and references first. Ask only what they cannot answer.
+- One message, two to four questions (one or two inside an existing product), each with a recommended answer first. One follow-up at most.
+- The questions, in order: the job, the feel, the limits, the one memorable move.
+- Play the brief back in five lines, mark your own calls, then start without waiting for approval.
+- The designer's explicit taste beats this skill's aesthetic defaults. It does not beat legibility, accessibility, or honesty.
+- At hand-over, check the work against those five lines.
 
 ## Non-Negotiables
 
@@ -82,7 +93,7 @@ Use for prototypes, floating controls, hero interactions, command palettes, stat
 
 - Use backdrop blur, translucent fills, internal highlights, and disciplined shadow stacks.
 - Use plus-lighter or overlay blending only where it improves depth.
-- Allow tilt, pointer-follow highlights, or refractive effects only if content stays legible.
+- Allow pointer-follow highlights or refractive effects only if content stays legible.
 - Keep the layout underneath strong and simple. Do not let the effect dissolve the interface into visual mush.
 - Apply the treatment to specific layers, not the whole page.
 
@@ -105,6 +116,15 @@ A contrast serif can appear in a Utility product for a hero headline or a celebr
 **5. When genuinely unsure, ask:**
 > *"Is the user here to complete a task or to feel something?"*
 > Task → Utility base. Feeling → context-appropriate mode.
+
+## Companion Skills
+
+Two optional skills go deeper on one job each. Read [references/companions.md](references/companions.md) before using or offering either.
+
+- **Stageshow**, when the viewer needs to see what the product does: faux product UI, hero scenes, feature cards, cursor walkthroughs.
+- **Hairline**, when the viewer needs to grasp an abstract idea: one isometric line figure that answers the pointer, new (`hairline-create`) or from an SVG (`hairline-adopt`).
+
+Use one per view, as the memorable move, and pass it the brief instead of interviewing again. If it is not installed, offer the install command once and respect a no.
 
 ## Typography Rules
 
@@ -187,7 +207,8 @@ Then apply the values:
 - Macro transitions (modals, drawers, page-level reveals, hero moments): `300-600ms`.
 - Favor spring settings near `stiffness: 300-400`, `damping: 25-30`, `mass: 0.5-0.8`.
 - Favor easing like `[0.22, 1, 0.36, 1]` or `[0.4, 0, 0.2, 1]`.
-- Favor fade-plus-slide, staggered entrance, mild hover lift, gentle scale, parallax, or masked media.
+- Favor fade-plus-slide, staggered entrance, gentle scale on entrance, parallax, or masked media.
+- Nothing moves on hover: no lift, nudge, tilt, magnet, or image zoom on buttons, links, cards, or media. Hover changes color, opacity, or light only. A Hairline figure or Stageshow scene is content, not a control, so it may answer the pointer.
 - Stagger staged entrances by around `100ms`, grouped either by element or by cluster.
 - Use infinite motion only for subtle glow, marquee, or ambient background behavior.
 - If an animation does not clarify hierarchy, state, or mood, cut it.
@@ -296,15 +317,16 @@ Accessibility is structural, not a pass at the end. Atmospheric modes (editorial
 
 ## Build Order
 
-1. Choose the correct mode.
-2. Define structure, hierarchy, and task flow.
-3. Build with native elements, real labels, and logical properties from the first pass.
-4. Set the type system and spacing rhythm.
-5. Choose one domain-appropriate accent palette, then define the semantic tokens components will actually reference.
-6. Add surface treatment, texture, or atmosphere.
-7. Add motion only where it clarifies meaning or improves feel.
-8. Run the craft pass: contrast on real surfaces, keyboard path, hit areas, reduced motion, dark mode, RTL, long and empty content.
-9. Review for restraint. Cut anything that does not earn its place.
+1. Settle the brief: interview if it is open, then play it back.
+2. Choose the correct mode.
+3. Define structure, hierarchy, and task flow.
+4. Build with native elements, real labels, and logical properties from the first pass.
+5. Set the type system and spacing rhythm.
+6. Choose one domain-appropriate accent palette, then define the semantic tokens components will actually reference.
+7. Add surface treatment, texture, or atmosphere, and the companion scene or figure if the brief calls for one.
+8. Add motion only where it clarifies meaning or improves feel.
+9. Run the craft pass: contrast on real surfaces, keyboard path, hit areas, reduced motion, dark mode, RTL, long and empty content.
+10. Review for restraint. Cut anything that does not earn its place.
 
 ## Review Output Format
 
@@ -317,6 +339,7 @@ One row per issue. "Which rule" points at the section of this skill the issue vi
 
 ## Review Checklist
 
+- Does the result answer the brief that was played back, line by line?
 - Does every element earn its place?
 - Would the interface still work if the "cool treatment" disappeared?
 - Does motion clarify something real, and can it be interrupted?
@@ -343,7 +366,10 @@ One row per issue. "Which rule" points at the section of this skill the issue vi
 | Two accent families mixed | Pick one accent family and stay there |
 | Three or more type voices | Cut to one main voice plus one contrast voice |
 | Decorative card containers | Remove the container or make it establish real layer separation |
+| Asking what the files already answer | Read first, then ask only what is still open |
+| Product scene or line figure used as filler | Name what is lost without it, or cut it |
 | Animation without a purpose | Cut it, or tie it to hierarchy, state, or mood |
+| Control or card that moves on hover | Change color, opacity, or light instead |
 | Micro-interaction over `250ms` | Bring it into the `120-200ms` band |
 | `transition: all` | Name the exact properties that change |
 | Same treatment on every surface | Apply atmosphere to specific layers, keep the rest quiet |
