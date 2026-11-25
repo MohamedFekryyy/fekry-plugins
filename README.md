@@ -6,7 +6,7 @@ i'm a product designer who got tired of agents shipping the same templated ai-lo
 
 ## what's inside
 
-one plugin, one skill: **match-fekry-design-core**.
+one plugin, one skill: **fekry-design-core**.
 
 my design philosophy, five style modes, motion language, and the implementation craft underneath, packaged so any agent can apply them. use it as-is if you like how i think, or fork it and swap in your own taste. honestly the best use of this repo is as a template for writing your own design skill.
 
@@ -65,6 +65,10 @@ or drop them in `~/.agents/skills/` to cover gemini cli and friends in one go.
 ## the short version of the philosophy
 
 design is not decoration. every element earns its place or gets cut. context beats hype. build fast, edit slowly. one memorable move beats five generic ones. if a phrase sounds cool but says nothing, delete it. same rule applies to UI.
+
+## renamed
+
+`match-fekry-design-core` is now `fekry-design-core`. if you copied the folder by hand, delete the old one first so you don't end up with both.
 
 ## license
 

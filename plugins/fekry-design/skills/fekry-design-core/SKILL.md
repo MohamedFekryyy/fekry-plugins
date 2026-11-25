@@ -1,13 +1,13 @@
 ---
-name: match-fekry-design-core
+name: fekry-design-core
 description: Portable version of Fekry Aiad's design philosophy and implementation craft, without his project-specific tokens, brand palettes, or source files. Interviews the designer briefly when a brief is open, then covers style modes, typography, color tokens, motion, accessibility, and UI copy. Routes to Stageshow for faux product UI and Hairline for interactive line figures when they fit. Use when designing or reviewing an interface with Fekry's approach, or as a starting point for building your own design skill.
 ---
 
-# Match Fekry Design (Core)
+# Fekry Design (Core)
 
 ## Overview
 
-Match Fekry by optimizing for utility first, then emotional precision. Build interfaces that earn their place, reduce the distance between user intent and outcome, and feel authored rather than trend-chased.
+Design like Fekry by optimizing for utility first, then emotional precision. Build interfaces that earn their place, reduce the distance between user intent and outcome, and feel authored rather than trend-chased.
 
 Taste decides what to build. Craft decides whether it survives contact with real users, real content, and real devices. This skill carries both: each section leads with the judgment call, then the implementation defaults that hold it up.
 
